@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_posts_posts",
+  "info": {
+    "displayName": "post",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
