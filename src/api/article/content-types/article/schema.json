@@ -85,6 +85,18 @@
       "relation": "manyToOne",
       "target": "api::article-group.article-group",
       "inversedBy": "articles"
+    },
+    "Group": {
+      "required": false,
+      "max": 20,
+      "min": 0,
+      "type": "integer"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "articles"
     }
   }
 }
