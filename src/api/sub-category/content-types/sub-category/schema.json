@@ -26,6 +26,12 @@
       "type": "uid",
       "targetField": "Name",
       "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "sub_category"
     }
   }
 }
