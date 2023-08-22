@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBaloon"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "articles"
+    },
+    "OG": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "reviewer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reviewer.reviewer",
+      "inversedBy": "articles"
+    },
+    "Age": {
+      "type": "customField",
+      "options": [
+        "12-18",
+        "19-29",
+        "30-50",
+        "50+"
+      ],
+      "required": true,
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "Gender": {
+      "type": "customField",
+      "options": [
+        "Male",
+        "Female"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "References": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "article_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article-group.article-group",
+      "inversedBy": "articles"
+    }
+  }
+}

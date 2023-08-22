@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "support_centers",
+  "info": {
+    "singularName": "support-center",
+    "pluralName": "support-centers",
+    "displayName": "Support Center",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Bio": {
+      "type": "text"
+    },
+    "Email": {
+      "type": "email",
+      "unique": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "Opereation": {
+      "type": "string",
+      "required": true
+    },
+    "website": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    }
+  }
+}

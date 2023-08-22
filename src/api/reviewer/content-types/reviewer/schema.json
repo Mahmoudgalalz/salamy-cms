@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviewers",
+  "info": {
+    "singularName": "reviewer",
+    "pluralName": "reviewers",
+    "displayName": "Reviewer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "Name"
+    },
+    "bio": {
+      "type": "text",
+      "required": true
+    },
+    "reviewer_slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "reviewer"
+    }
+  }
+}

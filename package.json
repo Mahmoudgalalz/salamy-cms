@@ -9,15 +9,19 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.12.5",
-    "@strapi/plugin-users-permissions": "4.12.5",
+    "@_sh/strapi-plugin-ckeditor": "^2.0.4",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
     "@strapi/plugin-i18n": "4.12.5",
-    "pg": "8.8.0"
+    "@strapi/plugin-users-permissions": "4.12.5",
+    "@strapi/strapi": "4.12.5",
+    "pg": "8.8.0",
+    "strapi-plugin-multi-select": "^1.2.2",
+    "strapi-plugin-protected-populate": "^1.3.3",
+    "strapi-plugin-slugify": "^2.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Mahmoud Galal <ssss.aaa2002@gmail.com>"
   },
   "strapi": {
     "uuid": "35e504c6-4bf3-4830-a3f4-da6834ad0433"

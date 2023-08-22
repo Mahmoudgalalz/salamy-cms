@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_groups",
+  "info": {
+    "singularName": "article-group",
+    "pluralName": "article-groups",
+    "displayName": "Article Group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "article_group"
+    }
+  }
+}

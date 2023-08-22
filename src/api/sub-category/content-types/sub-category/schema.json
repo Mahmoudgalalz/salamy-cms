@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_categories",
+  "info": {
+    "singularName": "sub-category",
+    "pluralName": "sub-categories",
+    "displayName": "Sub-Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "sub_categories"
+    },
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Sub_category_Slug": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    }
+  }
+}
