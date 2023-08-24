@@ -1,0 +1,66 @@
+{
+   "GET /api/articles": {
+      "content-type": "api::article.article",
+      "roles": {
+         "authenticated": {
+            "fields": [
+               "Title",
+               "Content",
+               "Age",
+               "Gender",
+               "References",
+               "Number"
+            ],
+            "populate": {
+               "author": {
+                  "fields": [
+                     "Name",
+                     "createdAt",
+                     "publishedAt",
+                     "updatedAt"
+                  ]
+               },
+               "OG": {
+                  "fields": [
+                     "name",
+                     "width",
+                     "alternativeText",
+                     "caption",
+                     "height",
+                     "formats",
+                     "ext",
+                     "size",
+                     "url",
+                     "previewUrl",
+                     "folderPath"
+                  ],
+                  "populate": {}
+               },
+               "reviewer": {
+                  "fields": [
+                     "Name",
+                     "bio",
+                     "slug",
+                     "reviewer_slug"
+                  ],
+                  "populate": {
+                     "avatar": {
+                        "fields": [
+                           "url",
+                           "previewUrl"
+                        ]
+                     }
+                  }
+               },
+               "article_group": {
+                  "fields": [
+                     "Name",
+                     "slug"
+                  ]
+               }
+            }
+         },
+         "public": {}
+      }
+   }
+}

@@ -17,9 +17,6 @@
       "unique": true,
       "required": true
     },
-    "description": {
-      "type": "text"
-    },
     "Content": {
       "type": "customField",
       "options": {
@@ -42,11 +39,6 @@
         "images"
       ]
     },
-    "Slug": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "reviewer": {
       "type": "relation",
       "relation": "manyToOne",
@@ -56,6 +48,7 @@
     "Age": {
       "type": "customField",
       "options": [
+        "All",
         "12-18",
         "19-29",
         "30-50",
@@ -67,6 +60,7 @@
     "Gender": {
       "type": "customField",
       "options": [
+        "All",
         "Male",
         "Female"
       ],
@@ -86,23 +80,16 @@
       "target": "api::article-group.article-group",
       "inversedBy": "articles"
     },
-    "Group": {
-      "required": false,
-      "max": 20,
-      "min": 0,
+    "Number": {
+      "required": true,
+      "max": 30,
+      "min": 1,
       "type": "integer"
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
-    },
-    "sub_category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::sub-category.sub-category",
-      "inversedBy": "articles"
+    "slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
     }
   }
 }

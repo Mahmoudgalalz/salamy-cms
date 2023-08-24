@@ -11,7 +11,7 @@ export default ({ env }) => ({
             contentTypes:{
                 article:{
                     field:'slug',
-                    references: 'Tsitle'
+                    references: 'Title'
                 }
             }
         }
