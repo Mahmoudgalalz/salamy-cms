@@ -37,11 +37,16 @@
       "mappedBy": "reviewer"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Links": {
+      "type": "text",
+      "default": "https://salamy.com/users/Mahmoudgalal, https://salamy.com/users/brandria,"
     }
   }
 }

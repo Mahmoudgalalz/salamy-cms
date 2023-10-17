@@ -36,6 +36,14 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "Cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

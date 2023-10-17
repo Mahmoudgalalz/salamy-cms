@@ -36,6 +36,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
     }
   }
 }

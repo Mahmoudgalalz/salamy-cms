@@ -26,6 +26,18 @@
       "relation": "oneToMany",
       "target": "api::article-group.article-group",
       "mappedBy": "category"
+    },
+    "Cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
     }
   }
 }
