@@ -16,15 +16,5 @@ export default [
       headers:['*']
     }
     
-  },
-  {
-    name: 'strapi::security',
-    config: {
-      contentSecurityPolicy: {
-        directives: {
-          'img-src': ['*'],
-        },
-      }
-    },
-  },
+  }
 ];

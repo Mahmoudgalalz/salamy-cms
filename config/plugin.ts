@@ -5,9 +5,6 @@ export default ({ env }) => ({
             ['auto-populate']:true
         }
     },
-    'tiptap-editor': {
-        enabled: true,
-    },
     slugify:{
         enabled:true,
         config:{
