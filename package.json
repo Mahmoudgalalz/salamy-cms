@@ -14,7 +14,7 @@
     "@_sh/strapi-plugin-ckeditor": "^2.0.4",
     "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
     "@strapi/plugin-i18n": "4.7.0",
-    "@strapi/plugin-users-permissions": "^4.16.2",
+    "@strapi/plugin-users-permissions": "^4.15.5-alpha.6",
     "@strapi/strapi": "4.12.5",
     "pg": "8.8.0",
     "strapi-plugin-multi-select": "^1.2.2",
