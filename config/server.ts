@@ -3,7 +3,7 @@ export default ({ env }) => ({
   port: env.int('PORT', 1337),
   url: 'https://api.salamy.space',
   app: {
-    keys: ["dsugdwq@!dsad","12ejghyuDSA21e!@"],
+    keys: env.array('APP_KEYS'),
   },
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
