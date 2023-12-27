@@ -40,6 +40,12 @@
     "Description": {
       "type": "text",
       "required": true
+    },
+    "article_groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article-group.article-group",
+      "mappedBy": "main_category"
     }
   }
 }

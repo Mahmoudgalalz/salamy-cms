@@ -44,6 +44,17 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "main_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::main-category.main-category",
+      "inversedBy": "article_groups"
+    },
+    "suggested_articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
     }
   }
 }
