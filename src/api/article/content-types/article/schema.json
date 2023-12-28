@@ -91,15 +91,10 @@
       "targetField": "Title",
       "required": true
     },
-    "featured": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "SEO": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
+    "Description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 150
     }
   }
 }
